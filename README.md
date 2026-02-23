@@ -25,4 +25,8 @@ The generated analysis (see below) shows how DTI distribution shifts for 'Defaul
 
 ![DTI Distribution](visualizations/DTI.PLOT.EN.png)
 
-![DTI Distribution](visualizations/DTI.PLOT.PL.png)
+<details>
+  <summary>Kliknij tutaj, aby zobaczyć wykres po polsku</summary>
+  <br>
+  ![DTI Distribution PL](visualizations/DTI_PLOT_PL.png)
+</details>
