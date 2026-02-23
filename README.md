@@ -28,7 +28,7 @@ This project demonstrates an end-to-end data engineering and risk analytics pipe
 ![DTI Distribution EN](visualizations/DTI_PLOT_EN.png)
 
 <details>
-  <summary>▼ Click here to see the Polish version of the analysis</summary>
+  <summary> Click here to see the Polish version of the analysis</summary>
   <br>
   
   ![DTI Distribution PL](visualizations/DTI_PLOT_PL.png)
