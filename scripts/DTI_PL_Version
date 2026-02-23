@@ -1,0 +1,38 @@
+import sqlite3
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.read_csv('credit_data_clean.csv')
+print(df[['loan_amnt','person_income']].head()) 
+
+conn = sqlite3.connect('credit_risk.db')
+df.to_sql('loans', conn, if_exists='replace', index=False)
+
+query = """
+SELECT 
+    loan_status,
+    person_income,
+    loan_amnt,
+    (CAST(loan_amnt AS FLOAT) / person_income) AS calculated_dti
+FROM loans
+WHERE person_income > 0 
+  AND person_age < 100
+"""
+
+df_result = pd.read_sql_query(query, conn)
+
+plt.style.use('ggplot')
+fig, ax = plt.subplots(figsize=(10, 6))
+
+for status in [0, 1]:
+    subset = df_result[df_result['loan_status'] == status]
+    label = 'Wypłacalność' if status == 0 else 'Niewypłacalność'
+    ax.hist(subset['calculated_dti'], bins=30, alpha=0.5, label=label, density=True)
+
+ax.set_title('Wskaźnik Długu do dochodu z podziałem na status płatnika')
+ax.set_xlabel('DTI (Wysokość pożyczki / Dochód roczny)')
+ax.set_ylabel('Gęstość występowania')
+ax.legend()
+
+plt.savefig('dti_distribution.png')
+plt.show()
