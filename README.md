@@ -23,10 +23,11 @@ This project demonstrates a data engineering and analysis pipeline for credit ri
 ## Insights
 The generated analysis (see below) shows how DTI distribution shifts for 'Default' cases compared to 'Repaid' loans, providing a visual threshold for risk appetite.
 
-![DTI Distribution](visualizations/DTI.PLOT.EN.png)
+![DTI Distribution EN](visualizations/DTI_PLOT_EN.png)
 
 <details>
-  <summary>Kliknij tutaj, aby zobaczyć wykres po polsku</summary>
+  <summary>▼ Kliknij tutaj, aby zobaczyć wykres po polsku</summary>
   <br>
+  
   ![DTI Distribution PL](visualizations/DTI_PLOT_PL.png)
 </details>
