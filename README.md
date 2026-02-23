@@ -26,7 +26,7 @@ The generated analysis (see below) shows how DTI distribution shifts for 'Defaul
 ![DTI Distribution EN](visualizations/DTI_PLOT_EN.png)
 
 <details>
-  <summary>▼ Kliknij tutaj, aby zobaczyć wykres po polsku</summary>
+  <summary> Kliknij tutaj, aby zobaczyć wykres po polsku</summary>
   <br>
   
   ![DTI Distribution PL](visualizations/DTI_PLOT_PL.png)
